@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>ÖRV HSV Traiskirchen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --green: #1f4f3a;
+    --accent: #7ecf9a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #222;
+    background: #f4f6f5;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("bg-agility.jpg") center/cover no-repeat;
+    color: #fff;
+    padding: 90px 20px;
+}
+
+.hero-inner {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 650px;
+}
+
+/* LOGOS */
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.logo-main {
+    height: 110px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.logo-asvoe {
+    height: 65px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* NAV */
+nav {
+    background: var(--green);
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* SECTIONS */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* DOGS */
+.dogs {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.dog {
+    width: 260px;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+.dog:nth-child(2) { animation-delay: 1.5s; }
+
+.dog img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* TURNIERKALENDER */
+.calendar {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th {
+    background: var(--green);
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+}
+
+.calendar td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+.calendar tr:hover {
+    background: #f5f9f7;
+}
+
+.date { font-weight: bold; white-space: nowrap; }
+.event { font-weight: 600; }
+.location { font-size: 0.9em; color: #555; }
+.judge { font-size: 0.9em; }
+
+/* BADGE */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-left: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #fff;
+    background: #d93025;
+    border-radius: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(217,48,37,0.6); }
+    70% { box-shadow: 0 0 0 10px rgba(217,48,37,0); }
+    100% { box-shadow: 0 0 0 0 rgba(217,48,37,0); }
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: #ccc;
+    padding: 50px 20px;
+    font-size: 0.9rem;
+}
+
+footer h3 { color: #fff; }
+footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <div class="hero-inner">
+        <h1>ÖRV HSV Traiskirchen</h1>
+        <p>
+            Hundesportverein im Österreichischen Rassehundeverein –  
+            aktiver Schwerpunkt Agility-Turniere und sportliche Ausbildung.
+        </p>
+
+        <div class="logos">
+            <img src="logo-oerv.png" alt="ÖRV HSV Traiskirchen" class="logo-main">
+            <img src="logo-asvoe-noe.png" alt="ASVÖ Niederösterreich" class="logo-asvoe">
+        </div>
+    </div>
+</div>
+
+<nav>
+    <a href="#verein">Verein</a>
+    <a href="#sport">Agility</a>
+    <a href="#turniere">Turniere</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section id="verein">
+<h2>Vereinsprofil</h2>
+<p>
+Der ÖRV HSV Traiskirchen ist ein dem Österreichischen Rassehundeverein (ÖRV)
+angeschlossener Hundesportverein sowie Mitglied des ASVÖ Niederösterreich.
+Der Verein widmet sich der fachgerechten Ausbildung von Hunden aller Rassen
+sowie der aktiven Ausübung des Hundesports.
+</p>
+</section>
+
+<section id="sport">
+<h2>Agility & Ausbildung</h2>
+<div class="cards">
+    <div class="card">
+        <h3>Agility Turniere</h3>
+        <p>Regelmäßige Organisation und Teilnahme an nationalen Agility-Turnieren.</p>
+    </div>
+    <div class="card">
+        <h3>Begleithundeausbildung</h3>
+        <p>Ausbildung gemäß den gültigen ÖRV-Prüfungsordnungen.</p>
+    </div>
+    <div class="card">
+        <h3>Vereinstraining</h3>
+        <p>Geführtes Training durch geprüfte Trainer in strukturierten Gruppen.</p>
+    </div>
+</div>
+</section>
+
+<section id="turniere">
+<h2>Agility Turnierkalender 2026</h2>
+
+<div class="calendar">
+<table>
+<thead>
+<tr>
+<th>Datum</th><th>Turnier</th><th>Ort</th><th>Meldung</th><th>Richter</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="date">18.01.2026</td>
+<td class="event">Glücksbärchi Nº1 2026 <span class="deadline" data-deadline="2026-01-11T20:00"></span></td>
+<td class="location">AVE-DOG Arena, Wiener Neudorf</td>
+<td>15.12.2025 20:00 – 11.01.2026 20:00</td>
+<td class="judge">Fried Katharina</td>
+</tr>
+
+<tr>
+<td class="date">08.02.2026</td>
+<td class="event">Glücksbärchi Nº2 2026 <span class="deadline" data-deadline="2026-02-01T20:00"></span></td>
+<td class="location">AVE-DOG Arena, Wiener Neudorf</td>
+<td>15.12.2025 20:00 – 01.02.2026 20:00</td>
+<td class="judge">Ganzi Karl Heinz</td>
+</tr>
+
+<tr>
+<td class="date">08.03.2026</td>
+<td class="event">Glücksbärchi Nº3 2026 <span class="deadline" data-deadline="2026-03-01T20:00"></span></td>
+<td class="location">AVE-DOG Arena, Wiener Neudorf</td>
+<td>15.12.2025 20:00 – 01.03.2026 20:00</td>
+<td class="judge">Horvath Rudolf</td>
+</tr>
+
+<tr>
+<td class="date">12.04.2026</td>
+<td class="event">Glücksbärchi Nº4 2026 <span class="deadline" data-deadline="2026-04-05T20:00"></span></td>
+<td class="location">Traiskirchen, Hochmühlstraße 34</td>
+<td>15.12.2025 20:00 – 05.04.2026 20:00</td>
+<td class="judge">Hauser Fritz</td>
+</tr>
+
+<tr>
+<td class="date">19.04.2026</td>
+<td class="event">Glücksbärchi Nº5 2026 <span class="deadline" data-deadline="2026-04-12T20:00"></span></td>
+<td class="location">Traiskirchen, Hochmühlstraße 34</td>
+<td>15.12.2025 20:00 – 12.04.2026 20:00</td>
+<td class="judge">Ganzi Karl Heinz</td>
+</tr>
+
+<tr>
+<td class="date">10.05.2026</td>
+<td class="event">Glücksbärchi Nº6 2026 <span class="deadline" data-deadline="2026-05-03T20:00"></span></td>
+<td class="location">Traiskirchen, Hochmühlstraße 34</td>
+<td>15.12.2025 20:00 – 03.05.2026 20:00</td>
+<td class="judge">Hauser Sabrina</td>
+</tr>
+
+<tr>
+<td class="date">04.06.2026</td>
+<td class="event">Der bunte Bär <span class="deadline" data-deadline="2026-05-17T20:00"></span></td>
+<td class="location">Traiskirchen, Hochmühlstraße 34</td>
+<td>15.12.2025 20:00 – 17.05.2026 20:00</td>
+<td class="judge">Horvath Rudolf, Wöss Christian</td>
+</tr>
+
+<tr>
+<td class="date">21.06.2026</td>
+<td class="event">Glücksbärchi Nº7 2026 <span class="deadline" data-deadline="2026-06-14T20:00"></span></td>
+<td class="location">Traiskirchen, Hochmühlstraße 34</td>
+<td>15.12.2025 20:00 – 14.06.2026 20:00</td>
+<td class="judge">Pöllmann Thomas</td>
+</tr>
+
+<tr>
+<td class="date">20.09.2026</td>
+<td class="event">Glücksbärchi Nº8 2026 <span class="deadline" data-deadline="2026-09-13T20:00"></span></td>
+<td class="location">Traiskirchen, Hochmühlstraße 34</td>
+<td>15.12.2025 20:00 – 13.09.2026 20:00</td>
+<td class="judge">Mladek Sonja</td>
+</tr>
+
+<tr>
+<td class="date">27.09.2026</td>
+<td class="event">Glücksbärchi Nº9 2026 <span class="deadline" data-deadline="2026-09-20T20:00"></span></td>
+<td class="location">Traiskirchen, Hochmühlstraße 34</td>
+<td>15.12.2025 20:00 – 20.09.2026 20:00</td>
+<td class="judge">Pöllmann Thomas</td>
+</tr>
+
+<tr>
+<td class="date">25.10.2026</td>
+<td class="event">Glücksbärchi Nº10 2026 <span class="deadline" data-deadline="2026-10-18T20:00"></span></td>
+<td class="location">AVE-DOG Arena, Wiener Neudorf</td>
+<td>15.12.2025 20:00 – 18.10.2026 20:00</td>
+<td class="judge">Horvath Rudolf</td>
+</tr>
+
+<tr>
+<td class="date">22.11.2026</td>
+<td class="event">Glücksbärchi Nº11 2026 <span class="deadline" data-deadline="2026-11-15T20:00"></span></td>
+<td class="location">AVE-DOG Arena, Wiener Neudorf</td>
+<td>15.12.2025 20:00 – 15.11.2026 20:00</td>
+<td class="judge">Fried Katharina</td>
+</tr>
+
+<tr>
+<td class="date">13.12.2026</td>
+<td class="event">Glücksbärchi Nº12 2026 <span class="deadline" data-deadline="2026-12-06T20:00"></span></td>
+<td class="location">AVE-DOG Arena, Wiener Neudorf</td>
+<td>15.12.2025 20:00 – 06.12.2026 20:00</td>
+<td class="judge">Horvath Rudolf</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="kontakt">
+<h2>Kontakt</h2>
+<p>
+<strong>ÖRV HSV Traiskirchen</strong><br>
+Traiskirchen, Hochmühlstraße 34, Niederösterreich<br>
+E-Mail:
+<a href="mailto:oerv.traiskirchen@icloud.com">
+oerv.traiskirchen@icloud.com
+</a>
+</p>
+</section>
+
+<footer>
+<h3>Impressum</h3>
+<p>
+ÖRV HSV Traiskirchen<br>
+Hundesportverein im Österreichischen Rassehundeverein (ÖRV)<br>
+Sitz: Traiskirchen, Hochmühlstraße 34, Niederösterreich<br>
+E-Mail:
+<a href="mailto:oerv.traiskirchen@icloud.com">
+oerv.traiskirchen@icloud.com
+</a>
+</p>
+
+<h3>Datenschutz</h3>
+<p>
+Personenbezogene Daten werden ausschließlich im Rahmen der gesetzlichen
+Bestimmungen (DSGVO, TKG 2003) verarbeitet.  
+Diese Website verwendet keine Cookies zu Analyse- oder Marketingzwecken.
+</p>
+
+<p>
+© 2025 ÖRV HSV Traiskirchen – Mitglied im ASVÖ Niederösterreich
+</p>
+</footer>
+
+<script>
+document.querySelectorAll(".deadline").forEach(el => {
+    const deadline = new Date(el.dataset.deadline);
+    const now = new Date();
+    const diffHours = (deadline - now) / (1000 * 60 * 60);
+    if (diffHours > 0 && diffHours <= 48) {
+        el.innerHTML = '<span class="badge">Nennschluss läuft</span>';
+    }
+});
+</script>
+
+</body>
+</html>
